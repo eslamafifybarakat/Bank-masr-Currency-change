@@ -1,6 +1,6 @@
 import { AlertsService } from './../../../core/services/alerts/alerts.service';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { currencies } from './../../../shared/Ts-Files/dummy-data';
+import { currencies, currenciesData } from './../../../shared/Ts-Files/dummy-data';
 import { keys } from './../../../shared/configs/localstorage-key';
 import { HomeService } from '../../services/home.service';
 import { Subscription } from 'rxjs';
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   currencyTwo: any;
   result: any = 0;
   currenciesData: any = [];
-  isLoadingCurrenciesData: any = [];
+  isLoadingCurrenciesData: boolean = false;
 
   constructor(
     // private alertsService: AlertsService,
@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.currentLanguage = window.localStorage.getItem(keys.language);
     this.getAllCurrencies();
+    this.getCurrenciesData();
   }
 
   getAllCurrencies(): void {
@@ -81,7 +82,28 @@ export class HomeComponent implements OnInit {
   convert(): void {
     this.result = this.amount * this.currencyTwo?.value;
   }
+  getCurrenciesData(): void {
+    this.isLoadingCurrenciesData = true;
+    this.homeService?.getCurrenciesData()?.subscribe(
+      (res: any) => {
+        if (res?.code === 200) {
+          this.currenciesData = res?.data ? res?.data : [];
+          this.isLoadingCurrenciesData = false;
+        } else {
+          // res?.message ? this.alertsService?.openSweetAlert('error', res?.message) : '';
+          this.isLoadingCurrenciesData = false;
+        }
+      },
+      (err: any) => {
+        // err?.message ? this.alertsService?.openSweetAlert('error', err?.message) : '';
+        this.isLoadingCurrenciesData = false;
+      });
+    this.cdr?.detectChanges();
 
+    this.currenciesData = currenciesData;
+    console.log(this.currenciesData);
+
+  }
   ngOnDestroy(): void {
     this.unsubscribe?.forEach((sb) => sb?.unsubscribe());
   }

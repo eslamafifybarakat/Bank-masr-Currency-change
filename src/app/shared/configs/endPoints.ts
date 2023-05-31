@@ -1,5 +1,6 @@
 export const roots = {
   home: {
-    getAllCurrencies: '/allCurrencies'
+    getAllCurrencies: '/allCurrencies',
+    getCurrencies: '/currencies-data',
   }
 }

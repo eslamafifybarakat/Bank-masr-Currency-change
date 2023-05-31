@@ -17,4 +17,7 @@ export class HomeService {
   getAllCurrencies(): Observable<any> {
     return this.http?.get<any>(`${this.baseUrl}/${roots?.home?.getAllCurrencies}`);
   }
+  getCurrenciesData(): Observable<any> {
+    return this.http?.get<any>(`${this.baseUrl}/${roots?.home?.getCurrencies}`);
+  }
 }
