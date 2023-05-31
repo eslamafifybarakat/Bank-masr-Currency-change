@@ -45,7 +45,8 @@ export class HomeComponent implements OnInit {
           res?.data ? res?.data?.forEach((item: any) => {
             arr?.push({
               id: item?.id,
-              name: this.currentLanguage == 'ar' ? item?.arName : item?.enName
+              name: this.currentLanguage == 'ar' ? item?.arName : item?.enName,
+              conversions: item?.conversions ? item?.conversions : '',
             })
           }) : '';
           this.isLoadingCurrencies = false;
@@ -67,7 +68,7 @@ export class HomeComponent implements OnInit {
       arr?.push({
         id: item?.id,
         name: this.currentLanguage == 'ar' ? item?.arName : item?.enName,
-        value: item?.value
+        conversions: item?.conversions ? item?.conversions : '',
       })
     });
     this.currenciesList = arr;
