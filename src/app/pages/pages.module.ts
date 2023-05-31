@@ -7,11 +7,13 @@ import { CoreModule } from '../core/core.module';
 import { CommonModule } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { NgModule } from '@angular/core';
+import { CurrencyDetailsComponent } from './components/currency-details/currency-details.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     HomeComponent,
+    CurrencyDetailsComponent,
   ],
   imports: [
     ReactiveFormsModule,
