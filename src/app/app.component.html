@@ -1,3 +1,9 @@
 <router-outlet></router-outlet>
 <app-overlay-loading></app-overlay-loading>
 <p-toast position="bottom-center"></p-toast>
+
+<ng-container *ngIf="showSpinner">
+  <div class="spinner d-flex justify-content-center align-items-center">
+    <img src="assets/images/logo/logo.png" class="logo" alt="logo">
+  </div>
+</ng-container>

@@ -21,18 +21,23 @@ export class AppComponent {
   browserLang: any;
   currentTheme: any = '';
   url: any = {};
+  showSpinner: boolean = true;
 
   constructor(
     private onlineStatusService: OnlineStatusService,
     private translateService: TranslateService,
     private activatedRoute: ActivatedRoute,
+    private alertsService: AlertsService,
     private sharedService: SharedService,
-    // private alertsService: AlertsService,
     private themeService: ThemeService,
     private config: PrimeNGConfig,
     private router: Router,
 
   ) {
+    setTimeout(() => {
+      this.showSpinner = false;
+    }, 2000);
+
     this.translateService?.addLangs(this.languages);
     const currentLang = window.localStorage.getItem(keys.language);
     this.translateService.stream('primeng').subscribe(data => {
@@ -96,10 +101,10 @@ export class AppComponent {
       this.themeService.setLightTheme();
     }
 
-    // this.onlineStatusService.status.subscribe((status: OnlineStatusType) => {
-    //   status ? this.alertsService?.openSnackBar(`your internet connection was  restored`, 2000, 'center', 'bottom')
-    //     : this.alertsService?.openSnackBar(`you are currently offline`, 2000, 'center', 'bottom')
-    // });
+    this.onlineStatusService.status.subscribe((status: OnlineStatusType) => {
+      status ? this.alertsService?.openSnackBar(`your internet connection was  restored`, 2000, 'center', 'bottom')
+        : this.alertsService?.openSnackBar(`you are currently offline`, 2000, 'center', 'bottom')
+    });
   }
 
 }
