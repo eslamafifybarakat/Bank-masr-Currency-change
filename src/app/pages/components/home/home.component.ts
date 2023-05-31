@@ -1,6 +1,6 @@
 import { AlertsService } from './../../../core/services/alerts/alerts.service';
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { currencies, currenciesData } from './../../../shared/Ts-Files/dummy-data';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { keys } from './../../../shared/configs/localstorage-key';
 import { HomeService } from '../../services/home.service';
 import { Subscription } from 'rxjs';
@@ -21,11 +21,12 @@ export class HomeComponent implements OnInit {
   currencyOne: any;
   currencyTwo: any;
   result: any = 0;
+
   currenciesData: any = [];
   isLoadingCurrenciesData: boolean = false;
 
   constructor(
-    // private alertsService: AlertsService,
+    private alertsService: AlertsService,
     private homeService: HomeService,
     private cdr: ChangeDetectorRef,
   ) { }
@@ -53,12 +54,12 @@ export class HomeComponent implements OnInit {
           this.currencyOne = this.currenciesList[0];
           this.currencyOne = this.currenciesList[1];
         } else {
-          // res?.message ? this.alertsService?.openSweetAlert('error', res?.message) : '';
+          res?.message ? this.alertsService?.openSweetAlert('error', res?.message) : '';
           this.isLoadingCurrencies = false;
         }
       },
       (err: any) => {
-        // err?.message ? this.alertsService?.openSweetAlert('error', err?.message) : '';
+        err?.message ? this.alertsService?.openSweetAlert('error', err?.message) : '';
         this.isLoadingCurrencies = false;
       });
     this.cdr?.detectChanges();
@@ -91,12 +92,12 @@ export class HomeComponent implements OnInit {
           this.currenciesData = res?.data ? res?.data : [];
           this.isLoadingCurrenciesData = false;
         } else {
-          // res?.message ? this.alertsService?.openSweetAlert('error', res?.message) : '';
+          res?.message ? this.alertsService?.openSweetAlert('error', res?.message) : '';
           this.isLoadingCurrenciesData = false;
         }
       },
       (err: any) => {
-        // err?.message ? this.alertsService?.openSweetAlert('error', err?.message) : '';
+        err?.message ? this.alertsService?.openSweetAlert('error', err?.message) : '';
         this.isLoadingCurrenciesData = false;
       });
     this.cdr?.detectChanges();
@@ -105,6 +106,7 @@ export class HomeComponent implements OnInit {
     console.log(this.currenciesData);
 
   }
+
   ngOnDestroy(): void {
     this.unsubscribe?.forEach((sb) => sb?.unsubscribe());
   }

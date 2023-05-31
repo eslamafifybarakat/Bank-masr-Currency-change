@@ -95,41 +95,48 @@
     <div class="mt-5">
       <ng-container *ngIf="!isLoadingCurrenciesData; else noDataLoading">
         <div class="row gy-4">
-          <ng-container *ngFor="let item of currenciesData">
-            <ng-container *ngFor="let element of item?.convertTo">
-              <div class="col-lg-4 col-md-6">
-                <div class="global-card">
-                  <div>
-                    <div class="d-flex align-items-center gap-2">
-                      <img [src]="item?.image" class="flag rounded-circle shadow-sm border" alt="us">
-                      <p>{{item?.shortName}} {{item?.name}}</p>
+          <ng-container *ngIf="currenciesData?.length>0;else noData">
+            <ng-container *ngFor="let item of currenciesData">
+              <ng-container *ngFor="let element of item?.convertTo">
+                <div class="col-lg-4 col-md-6">
+                  <div class="global-card">
+                    <div>
+                      <div class="d-flex align-items-center gap-2">
+                        <img [src]="item?.image" class="flag rounded-circle shadow-sm border" alt="us">
+                        <p>{{item?.shortName}} {{item?.name}}</p>
+                      </div>
+                      <div class="p-2 pt-3">
+                        <p class="text-desc-color">1 {{item?.shortName}} = {{element?.conversionRate}}
+                          {{element?.shortName}}</p>
+                        <p class="fs-3 mt-2">{{item?.amount}}</p>
+                      </div>
                     </div>
-                    <div class="p-2 pt-3">
-                      <p class="text-desc-color">1 {{item?.shortName}} = {{element?.conversionRate}}
-                        {{element?.shortName}}</p>
-                      <p class="fs-3 mt-2">{{item?.amount}}</p>
+                    <div class="d-flex justify-content-end position-relative currency-content">
+                      <div class="convert-icon rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="pi pi-sort-alt fs-8 text-white-color"></i>
+                      </div>
                     </div>
-                  </div>
-                  <div class="d-flex justify-content-end position-relative currency-content">
-                    <div class="convert-icon rounded-circle d-flex justify-content-center align-items-center">
-                      <i class="pi pi-sort-alt fs-8 text-white-color"></i>
-                    </div>
-                  </div>
-                  <div class="pt-2">
-                    <div class="d-flex align-items-center gap-2">
-                      <img [src]="element?.image" class="flag rounded-circle shadow-sm border" alt="aed">
-                      <p>{{element?.shortName}} {{element?.name}}</p>
-                    </div>
-                    <div class="p-2 pt-3 pb-0">
-                      <p class="text-desc-color">1 {{element?.shortName}} = {{element?.parentConversionRate}}
-                        {{item?.shortName}}</p>
-                      <p class="fs-3 mt-2">{{element?.convertedAmount}}</p>
+                    <div class="pt-2">
+                      <div class="d-flex align-items-center gap-2">
+                        <img [src]="element?.image" class="flag rounded-circle shadow-sm border" alt="aed">
+                        <p>{{element?.shortName}} {{element?.name}}</p>
+                      </div>
+                      <div class="p-2 pt-3 pb-0">
+                        <p class="text-desc-color">1 {{element?.shortName}} = {{element?.parentConversionRate}}
+                          {{item?.shortName}}</p>
+                        <p class="fs-3 mt-2">{{element?.convertedAmount}}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </ng-container>
             </ng-container>
           </ng-container>
+          <ng-template #noData>
+            <div class="global-card p-4 d-flex justify-content-center">
+              <img src="assets/images/not-found/no-data.svg" class="no-data" alt="no-data">
+            </div>
+          </ng-template>
         </div>
       </ng-container>
       <ng-template #noDataLoading>
