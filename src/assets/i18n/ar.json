@@ -9,26 +9,9 @@
     "convert":"تحويل",
     "details":"التفاصيل",
     "backToHome": "الرجوع للصفحة الرئيسية",
-    "inArabic": "باللغة العربية",
-    "inEnglish": "باللغة الإنجليزية",
     "no_result_found": "لا يوجد نتائج",
-    "arabicOnly": "العربية فقط",
-    "englishOnly": "الأنجليزية فقط",
-    "view": "استعراض",
-    "delete": "حذف",
-    "update": "تحديث",
-    "edit": "تعديل",
-    "clear": "مسح",
     "light": "فاتح",
-    "dark": "عامق",
-    "ok": "تم",
-    "prev": "السابق",
-    "home": "الرئيسية",
-    "close": "إغلاق",
-    "save": "حفظ",
-    "send": "إرسال",
-    "yes": "نعم",
-    "no": "لا"
+    "dark": "عامق"
   },
 
   "labels": {
@@ -41,59 +24,7 @@
     "currency":"العملة",
     "search":"بحث"
    },
-  "validations": {
-
-  },
-  "form": {
-  },
   "home":{
     "currencyExchanger":"مبادل العملات"
-  },
-  "primeng": {
-    "startsWith": "إبدا ب",
-    "contains": "يحتوي",
-    "notContains": "لا يحتوي على",
-    "endsWith": "ينتهي بـ",
-    "equals": "يساوي",
-    "notEquals": "لا يساوي",
-    "noFilter": "No Filter",
-    "lt": "أقل من",
-    "lte": "اقل من او يساوي",
-    "gt": "أكثر من",
-    "gte": "أكثر من  او يساوي",
-    "is": "يكون",
-    "isNot": "لا يكون",
-    "before": "قبل",
-    "after": "بعد",
-    "dateIs": "التاريخ هو",
-    "dateIsNot": "التاريخ ليس كذلك",
-    "dateBefore": "التاريخ قبل",
-    "dateAfter": "التاريخ بعد",
-    "clear": "مسح",
-    "apply": "يتقدم",
-    "matchAll": "تطابق الكل",
-    "matchAny": "أي تطابق",
-    "addRule": "أضف القاعدة",
-    "removeRule": "إزالة القاعدة",
-    "accept": "نعم",
-    "reject": "لا",
-    "choose": "إختر",
-    "upload": "رفع",
-    "cancel": "إلغاء",
-    "dayNames": ["الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"],
-    "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-    "dayNamesMin": ["Su","Mo","Tu","We","Th","Fr","Sa"],
-    "monthNames": ["يناير"," فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر"," نوفمبر","ديسمبر"],
-    "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    "dateFormat": "mm/dd/yy",
-    "firstDayOfWeek": 0,
-    "today": "اليوم",
-    "weekHeader": "Wk",
-    "weak": "ضعيف",
-    "medium": "متوسط",
-    "strong": "قوي",
-    "passwordPrompt": "أدخل كلمة المرور",
-    "emptyMessage": "لم يتم العثور على نتائج",
-    "emptyFilterMessage": "لم يتم العثور على نتائج"
-}
+  }
 }
