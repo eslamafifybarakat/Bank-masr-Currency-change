@@ -11,6 +11,7 @@ import { PrimeNgModule } from './modules/prime-ng/prime-ng.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 
@@ -30,6 +31,7 @@ const allSharedModule = [
   // AngMaterialModule,
   TranslateModule,
   PrimeNgModule,
+  RouterModule,
   FormsModule,
 ]
 

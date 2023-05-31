@@ -7,10 +7,10 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'pages', loadChildren: () => import('../pages/pages.module').then(m => m.PagesModule) },
+      { path: '', loadChildren: () => import('../pages/pages.module').then(m => m.PagesModule) },
       {
         path: '',
-        redirectTo: 'pages',
+        redirectTo: '',
         pathMatch: 'full',
       },
     ]

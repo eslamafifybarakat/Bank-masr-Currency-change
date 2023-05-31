@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-  { path: 'layout', loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule) },
+  { path: '', loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule) },
 
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
 
@@ -11,7 +11,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'layout',
+    redirectTo: '',
     pathMatch: 'full',
   },
 ];
