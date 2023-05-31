@@ -1,0 +1,32 @@
+#home {
+  .converter {
+    padding-top: 2rem !important;
+  }
+  .convert-value {
+    border: 1px solid var(--bg-main-color);
+    border-radius: var(--border-input-radius);
+    padding: 15px !important;
+  }
+  .flag {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+  .convert-icon {
+    background-color: var(--bg-main-color) !important;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+  }
+  .currency-content {
+    &::before {
+      content: "";
+      position: absolute;
+      border: 0.6px solid #f2f2f2;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+}
