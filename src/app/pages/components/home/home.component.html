@@ -13,9 +13,9 @@
           <div class="col-lg-7">
             <div class=" d-flex justify-content-end align-items-center gap-3">
               <div class="w-100">
-                <label for="amount" class="fw-bold mb-2">{{'labels.from'|translate}}</label>
+                <label for="from" class="fw-bold mb-2">{{'labels.from'|translate}}</label>
                 <span class="p-input-icon-right select-loading d-block w-100">
-                  <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
+                  <!-- <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
                     [(ngModel)]="currencyOne" [filterPlaceholder]="'placeholder.search'|translate"
                     [virtualScrollItemSize]="38" filterBy="name" appendTo="body" [readonly]="isLoadingCurrencies"
                     scrollHeight="200px" emptyMessage="{{'general.no_result_found'|translate}}"
@@ -23,6 +23,24 @@
                     <ng-template let-type pTemplate="item">
                       <div class="type-item">
                         <div>{{type.name}}</div>
+                      </div>
+                    </ng-template>
+                  </p-dropdown> -->
+                  <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
+                    [(ngModel)]="currencyOne" [filterPlaceholder]="'placeholder.search'|translate"
+                    [virtualScrollItemSize]="38" filterBy="name" appendTo="body" [readonly]="isLoadingCurrencies"
+                    scrollHeight="200px" emptyMessage="{{'general.no_result_found'|translate}}"
+                    placeholder="{{'placeholder.currency'|translate}}">
+                    <ng-template pTemplate="selectedItem">
+                      <div class="country-item country-item-value d-flex align-items-center gap-2" *ngIf="currencyOne">
+                        <img [src]="currencyOne?.image" class="dropdown-flag shadow-sm border" />
+                        <div>{{currencyOne.name}}</div>
+                      </div>
+                    </ng-template>
+                    <ng-template let-currency pTemplate="item">
+                      <div class="country-item d-flex align-items-center gap-2">
+                        <img [src]="currency?.image" class="dropdown-flag shadow-sm border" />
+                        <div>{{currency?.name}}</div>
                       </div>
                     </ng-template>
                   </p-dropdown>
@@ -34,9 +52,9 @@
               <a class="converter text-main-color" (click)="changeCurrencies()"><i
                   class="pi pi-arrow-right-arrow-left fs-5"></i></a>
               <div class="w-100">
-                <label for="amount" class="fw-bold mb-2">{{'labels.to'|translate}}</label>
+                <label for="to" class="fw-bold mb-2">{{'labels.to'|translate}}</label>
                 <span class="p-input-icon-right select-loading d-block w-100">
-                  <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
+                  <!-- <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
                     [(ngModel)]="currencyTwo" [filterPlaceholder]="'placeholder.search'|translate"
                     [virtualScrollItemSize]="38" filterBy="name" appendTo="body" [readonly]="isLoadingCurrencies"
                     scrollHeight="200px" emptyMessage="{{'general.no_result_found'|translate}}"
@@ -44,6 +62,24 @@
                     <ng-template let-type pTemplate="item">
                       <div class="type-item">
                         <div>{{type.name}}</div>
+                      </div>
+                    </ng-template>
+                  </p-dropdown> -->
+                  <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
+                    [(ngModel)]="currencyTwo" [filterPlaceholder]="'placeholder.search'|translate"
+                    [virtualScrollItemSize]="38" filterBy="name" appendTo="body" [readonly]="isLoadingCurrencies"
+                    scrollHeight="200px" emptyMessage="{{'general.no_result_found'|translate}}"
+                    placeholder="{{'placeholder.currency'|translate}}">
+                    <ng-template pTemplate="selectedItem">
+                      <div class="country-item country-item-value d-flex align-items-center gap-2" *ngIf="currencyTwo">
+                        <img [src]="currencyTwo?.image" class="dropdown-flag shadow-sm border" />
+                        <div>{{currencyTwo.name}}</div>
+                      </div>
+                    </ng-template>
+                    <ng-template let-currency pTemplate="item">
+                      <div class="country-item d-flex align-items-center gap-2">
+                        <img [src]="currency?.image" class="dropdown-flag shadow-sm border" />
+                        <div>{{currency?.name}}</div>
                       </div>
                     </ng-template>
                   </p-dropdown>
@@ -70,7 +106,7 @@
                 </div>
                 <span>=</span>
                 <div>
-                  {{currencyOne?.conversions?.[currencyTwo.name]}}
+                  {{currencyOne?.conversions?.[currencyTwo.base]}}
                   <span> {{currencyTwo.name}}</span>
                 </div>
               </div>

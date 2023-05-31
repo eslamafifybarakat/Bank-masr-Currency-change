@@ -1,7 +1,7 @@
 #home {
   .flag {
-    width: 30px;
-    height: 30px;
+    width: 30px !important;
+    height: 30px !important;
     object-fit: cover;
   }
   .convert-icon {
@@ -24,4 +24,10 @@
   .no-data {
     width: 280px;
   }
+}
+.dropdown-flag {
+  width: 25px !important;
+  height: 18px !important;
+  object-fit: cover;
+  border-radius: 2px;
 }

@@ -48,6 +48,8 @@ export class HomeComponent implements OnInit {
               id: item?.id,
               name: this.currentLanguage == 'ar' ? item?.arName : item?.enName,
               conversions: item?.conversions ? item?.conversions : '',
+              image: item?.image ? item?.image : '',
+              base: item?.base ? item?.base : ''
             })
           }) : '';
           this.isLoadingCurrencies = false;
@@ -70,6 +72,8 @@ export class HomeComponent implements OnInit {
         id: item?.id,
         name: this.currentLanguage == 'ar' ? item?.arName : item?.enName,
         conversions: item?.conversions ? item?.conversions : '',
+        image: item?.image ? item?.image : '',
+        base: item?.base ? item?.base : ''
       })
     });
     this.currenciesList = arr;
@@ -77,12 +81,13 @@ export class HomeComponent implements OnInit {
     this.currencyTwo = this.currenciesList[1];
   }
   changeCurrencies(): void {
+    this.result = 0;
     var tempValue = this.currencyOne;
     this.currencyOne = this.currencyTwo;
     this.currencyTwo = tempValue;
   }
   convert(): void {
-    this.result = this.amount * this.currencyTwo?.value;
+    this.result = this.amount * this.currencyOne?.conversions?.[this.currencyTwo?.base];
   }
   getCurrenciesData(): void {
     this.isLoadingCurrenciesData = true;

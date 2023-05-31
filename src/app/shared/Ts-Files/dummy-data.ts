@@ -1,6 +1,6 @@
 export const currencies = [
   {
-    id: 1, enName: 'EGP', arName: 'جنية مصري', value: 1, "symbol": "EGP",
+    id: 1, enName: 'EGP', arName: 'جنية مصري', "symbol": "EGP", base: 'EGP',
     "conversions": {
       "USD": 0.063,
       "EUR": 0.053,
@@ -9,10 +9,11 @@ export const currencies = [
       "AUD": 0.081,
       "JPY": 7.05,
       "INR": 4.18
-    }
+    },
+    "image": "../../../assets/images/flag/eg.svg",
   },
   {
-    id: 1, enName: 'USD', arName: 'دولار امريكي', value: 30,
+    id: 1, enName: 'USD', arName: 'دولار امريكي', base: 'USD',
     "symbol": "$",
     "conversions": {
       "EGP": 15.75,
@@ -22,10 +23,11 @@ export const currencies = [
       "AUD": 1.29,
       "JPY": 109.53,
       "INR": 73.63
-    }
+    },
+    "image": "../../../assets/images/flag/us.svg",
   },
   {
-    id: 1, enName: 'EUR', arName: 'يورو', value: 22,
+    id: 1, enName: 'EUR', arName: 'يورو', base: 'EUR',
     "symbol": "€",
     "conversions": {
       "EGP": 18.99,
@@ -35,10 +37,11 @@ export const currencies = [
       "AUD": 1.57,
       "JPY": 132.78,
       "INR": 89.28
-    }
+    },
+    "image": "../../../assets/images/flag/eur.jpg",
   },
   {
-    id: 1, enName: 'GBP', arName: 'جنية استرليني', value: 43,
+    id: 1, enName: 'GBP', arName: 'جنية استرليني', base: 'GBP',
     "symbol": "£",
     "conversions": {
       "EGP": 22.20,
@@ -48,10 +51,11 @@ export const currencies = [
       "AUD": 1.83,
       "JPY": 155.16,
       "INR": 104.23
-    }
+    },
+    "image": "../../../assets/images/flag/gbp.jpg",
   },
   {
-    id: 1, enName: 'INR', arName: 'الروبية الهندية', "symbol": "₹",
+    id: 1, enName: 'INR', arName: 'الروبية الهندية', base: 'INR', "symbol": "₹",
     "conversions": {
       "EGP": 0.24,
       "USD": 0.014,
@@ -60,10 +64,11 @@ export const currencies = [
       "CAD": 0.017,
       "AUD": 0.018,
       "JPY": 1.49
-    }
+    },
+    "image": "../../../assets/images/flag/bhd.jpg",
   },
   {
-    id: 1, enName: 'AUD', arName: 'دولار استرليني', value: 56, "symbol": "AU$",
+    id: 1, enName: 'AUD', arName: 'دولار استرليني', base: 'AUD', "symbol": "AU$",
     "conversions": {
       "EGP": 12.35,
       "USD": 0.78,
@@ -72,10 +77,11 @@ export const currencies = [
       "CAD": 0.94,
       "JPY": 81.62,
       "INR": 54.90
-    }
+    },
+    "image": "../../../assets/images/flag/aud.jpg",
   },
   {
-    id: 1, enName: 'JPY', arName: 'الين الياباني', "symbol": "¥",
+    id: 1, enName: 'JPY', arName: 'الين الياباني', base: 'JPY', "symbol": "¥",
     "conversions": {
       "EGP": 0.14,
       "USD": 0.0091,
@@ -84,120 +90,10 @@ export const currencies = [
       "CAD": 0.012,
       "AUD": 0.012,
       "INR": 0.67
-    }
+    },
+    "image": "../../../assets/images/flag/jpy.jpg",
   },
 ]
-
-
-// {
-//   "USD": {
-//     "name": "US Dollar",
-//     "symbol": "$",
-//     "conversions": {
-//       "EGP": 15.75,
-//       "EUR": 0.83,
-//       "GBP": 0.71,
-//       "CAD": 1.21,
-//       "AUD": 1.29,
-//       "JPY": 109.53,
-//       "INR": 73.63
-//     }
-//   },
-//   "EUR": {
-//     "name": "Euro",
-//     "symbol": "€",
-//     "conversions": {
-//       "EGP": 18.99,
-//       "USD": 1.21,
-//       "GBP": 0.86,
-//       "CAD": 1.47,
-//       "AUD": 1.57,
-//       "JPY": 132.78,
-//       "INR": 89.28
-//     }
-//   },
-//   "GBP": {
-//     "name": "British Pound",
-//     "symbol": "£",
-//     "conversions": {
-//       "EGP": 22.20,
-//       "USD": 1.41,
-//       "EUR": 1.16,
-//       "CAD": 1.71,
-//       "AUD": 1.83,
-//       "JPY": 155.16,
-//       "INR": 104.23
-//     }
-//   },
-//   "CAD": {
-//     "name": "Canadian Dollar",
-//     "symbol": "CA$",
-//     "conversions": {
-//       "EGP": 13.22,
-//       "USD": 0.82,
-//       "EUR": 0.68,
-//       "GBP": 0.59,
-//       "AUD": 1.07,
-//       "JPY": 85.91,
-//       "INR": 57.68
-//     }
-//   },
-//   "AUD": {
-//     "name": "Australian Dollar",
-//     "symbol": "AU$",
-//     "conversions": {
-//       "EGP": 12.35,
-//       "USD": 0.78,
-//       "EUR": 0.64,
-//       "GBP": 0.55,
-//       "CAD": 0.94,
-//       "JPY": 81.62,
-//       "INR": 54.90
-//     }
-//   },
-//   "JPY": {
-//     "name": "Japanese Yen",
-//     "symbol": "¥",
-//     "conversions": {
-//       "EGP": 0.14,
-//       "USD": 0.0091,
-//       "EUR": 0.0075,
-//       "GBP": 0.0064,
-//       "CAD": 0.012,
-//       "AUD": 0.012,
-//       "INR": 0.67
-//     }
-//   },
-//   "INR": {
-//     "name": "Indian Rupee",
-//     "symbol": "₹",
-//     "conversions": {
-//       "EGP": 0.24,
-//       "USD": 0.014,
-//       "EUR": 0.011,
-//       "GBP": 0.0096,
-//       "CAD": 0.017,
-//       "AUD": 0.018,
-//       "JPY": 1.49
-//     }
-//   },
-//   "EGP": {
-//     "name": "Egyptian Pound",
-//     "symbol": "EGP",
-//     "conversions": {
-//       "USD": 0.063,
-//       "EUR": 0.053,
-//       "GBP": 0.045,
-//       "CAD": 0.076,
-//       "AUD": 0.081,
-//       "JPY": 7.05,
-//       "INR": 4.18
-//     }
-//   }
-// }
-
-
-
 
 
 
