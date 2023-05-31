@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,17 +7,13 @@ import { SharedService } from '../../services/shared.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  moduleType: string = '';
+  collapsedMenu: boolean = false;
 
   constructor(
     private sharedService: SharedService,
   ) { }
 
   ngOnInit(): void {
-    this.sharedService?.urlData?.subscribe((res: any) => {
-      this.moduleType = res?.moduleType;
-      console.log(this.moduleType);
-    })
   }
 
 }

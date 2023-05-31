@@ -15,17 +15,6 @@
               <div class="w-100">
                 <label for="from" class="fw-bold mb-2">{{'labels.from'|translate}}</label>
                 <span class="p-input-icon-right select-loading d-block w-100">
-                  <!-- <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
-                    [(ngModel)]="currencyOne" [filterPlaceholder]="'placeholder.search'|translate"
-                    [virtualScrollItemSize]="38" filterBy="name" appendTo="body" [readonly]="isLoadingCurrencies"
-                    scrollHeight="200px" emptyMessage="{{'general.no_result_found'|translate}}"
-                    placeholder="{{'placeholder.currency'|translate}}">
-                    <ng-template let-type pTemplate="item">
-                      <div class="type-item">
-                        <div>{{type.name}}</div>
-                      </div>
-                    </ng-template>
-                  </p-dropdown> -->
                   <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
                     [(ngModel)]="currencyOne" [filterPlaceholder]="'placeholder.search'|translate"
                     [virtualScrollItemSize]="38" filterBy="name" appendTo="body" [readonly]="isLoadingCurrencies"
@@ -54,17 +43,6 @@
               <div class="w-100">
                 <label for="to" class="fw-bold mb-2">{{'labels.to'|translate}}</label>
                 <span class="p-input-icon-right select-loading d-block w-100">
-                  <!-- <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
-                    [(ngModel)]="currencyTwo" [filterPlaceholder]="'placeholder.search'|translate"
-                    [virtualScrollItemSize]="38" filterBy="name" appendTo="body" [readonly]="isLoadingCurrencies"
-                    scrollHeight="200px" emptyMessage="{{'general.no_result_found'|translate}}"
-                    placeholder="{{'placeholder.currency'|translate}}">
-                    <ng-template let-type pTemplate="item">
-                      <div class="type-item">
-                        <div>{{type.name}}</div>
-                      </div>
-                    </ng-template>
-                  </p-dropdown> -->
                   <p-dropdown [options]="currenciesList" optionLabel="name" [filter]="true" [virtualScroll]="true"
                     [(ngModel)]="currencyTwo" [filterPlaceholder]="'placeholder.search'|translate"
                     [virtualScrollItemSize]="38" filterBy="name" appendTo="body" [readonly]="isLoadingCurrencies"

@@ -20,4 +20,8 @@ export class HomeService {
   getCurrenciesData(): Observable<any> {
     return this.http?.get<any>(`${this.baseUrl}/${roots?.home?.getCurrencies}`);
   }
+
+  getChartData(): Observable<any> {
+    return this.http?.get<any>(`${this.baseUrl}/${roots?.home?.getChartData}`);
+  }
 }

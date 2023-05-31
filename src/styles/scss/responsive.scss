@@ -20,13 +20,13 @@
   .navbar-collapse {
     background-color: var(--bg-white-color) !important;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-    flex-direction: row !important;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
     border-radius: 0 0 10px 10px;
     .navbar-nav {
-      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center;
     }
   }
 }

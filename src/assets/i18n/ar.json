@@ -4,10 +4,11 @@
     "arabic":"Arabic"
   },
   "general": {
+    "default":"افتراضي",
     "moreDetails":"المزيد من التفاصيل",
     "convert":"تحويل",
     "details":"التفاصيل",
-    "back": "السابق",
+    "backToHome": "الرجوع للصفحة الرئيسية",
     "inArabic": "باللغة العربية",
     "inEnglish": "باللغة الإنجليزية",
     "no_result_found": "لا يوجد نتائج",

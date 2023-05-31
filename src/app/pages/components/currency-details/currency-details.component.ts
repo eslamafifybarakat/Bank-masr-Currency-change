@@ -1,5 +1,5 @@
 import { AlertsService } from './../../../core/services/alerts/alerts.service';
-import { currencies, currenciesData } from './../../../shared/Ts-Files/dummy-data';
+import { chartData, currencies, currenciesData } from './../../../shared/Ts-Files/dummy-data';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { keys } from './../../../shared/configs/localstorage-key';
 import { HomeService } from '../../services/home.service';
@@ -22,9 +22,39 @@ export class CurrencyDetailsComponent implements OnInit {
   currencyTwo: any;
   result: any = 0;
 
-  currenciesData: any = [];
-  isLoadingCurrenciesData: boolean = false;
+  chartData: any;
+  chartDataRates: any = [];
+  months: any = [];
+  isLoadingChartData: boolean = false;
 
+  chartOptions = {
+    plugins: {
+      legend: {
+        labels: {
+          color: '#495057'
+        }
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: '#495057'
+        },
+        grid: {
+          color: '#ebedef'
+        }
+      },
+      y: {
+        ticks: {
+          color: '#495057',
+          stepSize: 3,
+        },
+        grid: {
+          color: '#ebedef'
+        }
+      }
+    }
+  };
   constructor(
     private alertsService: AlertsService,
     private homeService: HomeService,
@@ -34,7 +64,7 @@ export class CurrencyDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.currentLanguage = window.localStorage.getItem(keys.language);
     this.getAllCurrencies();
-    this.getCurrenciesData();
+    this.getChartData();
   }
 
   getAllCurrencies(): void {
@@ -48,6 +78,8 @@ export class CurrencyDetailsComponent implements OnInit {
               id: item?.id,
               name: this.currentLanguage == 'ar' ? item?.arName : item?.enName,
               conversions: item?.conversions ? item?.conversions : '',
+              image: item?.image ? item?.image : '',
+              base: item?.base ? item?.base : ''
             })
           }) : '';
           this.isLoadingCurrencies = false;
@@ -70,6 +102,8 @@ export class CurrencyDetailsComponent implements OnInit {
         id: item?.id,
         name: this.currentLanguage == 'ar' ? item?.arName : item?.enName,
         conversions: item?.conversions ? item?.conversions : '',
+        image: item?.image ? item?.image : '',
+        base: item?.base ? item?.base : ''
       })
     });
     this.currenciesList = arr;
@@ -77,34 +111,52 @@ export class CurrencyDetailsComponent implements OnInit {
     this.currencyTwo = this.currenciesList[1];
   }
   changeCurrencies(): void {
+    this.result = 0;
     var tempValue = this.currencyOne;
     this.currencyOne = this.currencyTwo;
     this.currencyTwo = tempValue;
   }
   convert(): void {
-    this.result = this.amount * this.currencyTwo?.value;
+    this.result = this.amount * this.currencyOne?.conversions?.[this.currencyTwo?.base];
   }
-  getCurrenciesData(): void {
-    this.isLoadingCurrenciesData = true;
+  getChartData(): void {
+    this.isLoadingChartData = true;
     this.homeService?.getCurrenciesData()?.subscribe(
       (res: any) => {
         if (res?.code === 200) {
-          this.currenciesData = res?.data ? res?.data : [];
-          this.isLoadingCurrenciesData = false;
+          res?.data ? res?.data?.forEach((item: any) => {
+            this.months?.push(item?.month);
+            this.chartDataRates?.push(item?.rate);
+          }) : '';
+          this.isLoadingChartData = false;
         } else {
           res?.message ? this.alertsService?.openSweetAlert('error', res?.message) : '';
-          this.isLoadingCurrenciesData = false;
+          this.isLoadingChartData = false;
         }
       },
       (err: any) => {
         err?.message ? this.alertsService?.openSweetAlert('error', err?.message) : '';
-        this.isLoadingCurrenciesData = false;
+        this.isLoadingChartData = false;
       });
     this.cdr?.detectChanges();
+    chartData?.forEach((item: any) => {
+      this.months?.push(item?.month);
+      this.chartDataRates?.push(item?.rate);
+    });
 
-    this.currenciesData = currenciesData;
-    console.log(this.currenciesData);
-
+    this.chartData = {
+      labels: this.months,
+      datasets: [
+        {
+          label: 'EUR',
+          data: this.chartDataRates,
+          fill: true,
+          borderColor: '#990d2c',
+          tension: .4,
+          backgroundColor: 'rgba(153,13,44,0.2)'
+        }
+      ]
+    };
   }
 
   ngOnDestroy(): void {

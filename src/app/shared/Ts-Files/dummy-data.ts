@@ -97,8 +97,6 @@ export const currencies = [
 
 
 
-
-
 export const currenciesData = [
   {
     "name": "United States Dollar",
@@ -130,14 +128,6 @@ export const currenciesData = [
         "convertedAmount": 10935000,
         "parentConversionRate": 0.0091
       },
-      // {
-      //   "name": "Egyptian Pound",
-      //   "shortName": "EGP",
-      //   "image": "../../../assets/images/flag/eg.svg",
-      //   "conversionRate": 16.79,
-      //   "convertedAmount": 1679000,
-      //   "parentConversionRate": 0.059
-      // }
     ]
   },
   {
@@ -146,14 +136,6 @@ export const currenciesData = [
     "image": "../../../assets/images/flag/eur.jpg",
     "amount": 85000,
     "convertTo": [
-      // {
-      //   "name": "United States Dollar",
-      //   "shortName": "USD",
-      //   "image": "../../../assets/images/flag/us.svg",
-      //   "conversionRate": 1.18,
-      //   "convertedAmount": 100300,
-      //   "parentConversionRate": 0.85
-      // },
       {
         "name": "British Pound",
         "shortName": "GBP",
@@ -202,14 +184,6 @@ export const currenciesData = [
         "convertedAmount": 85080,
         "parentConversionRate": 0.85
       },
-      // {
-      //   "name": "Japanese Yen",
-      //   "shortName": "JPY",
-      //   "image": "../../../assets/images/flag/jpy.jpg",
-      //   "conversionRate": 151.91,
-      //   "convertedAmount": 10950720,
-      //   "parentConversionRate": 0.0091
-      // },
       {
         "name": "Egyptian Pound",
         "shortName": "EGP",
@@ -222,185 +196,12 @@ export const currenciesData = [
   }
 ]
 
-// export const currenciesData = [
-//   {
-//     "name": "United States Dollar",
-//     "shortName": "USD",
-//     "image": "../../../assets/images/flag/us.svg",
-//     "amount": 100000,
-//     "convertTo": [
-//       {
-//         "name": "Euro",
-//         "shortName": "EUR",
-//         "image": "../../../assets/images/flag/eur.jpg",
-//         "conversionRate": 0.85,
-//         "convertedAmount": 85000
-//       },
-//       {
-//         "name": "British Pound",
-//         "shortName": "GBP",
-//         "image": "../../../assets/images/flag/gbp.jpg",
-//         "conversionRate": 0.72,
-//         "convertedAmount": 72000
-//       },
-//       {
-//         "name": "Japanese Yen",
-//         "shortName": "JPY",
-//         "image": "../../../assets/images/flag/jpy.jpg",
-//         "conversionRate": 109.35,
-//         "convertedAmount": 10935000
-//       },
-//       {
-//         "name": "Egyptian Pound",
-//         "shortName": "EGP",
-//         "image": "../../../assets/images/flag/eg.svg",
-//         "conversionRate": 16.79,
-//         "convertedAmount": 1679000
-//       }
-//     ]
-//   },
-//   {
-//     "name": "Euro",
-//     "shortName": "EUR",
-//     "image": "../../../assets/images/flag/eur.jpg",
-//     "amount": 85000,
-//     "convertTo": [
-//       {
-//         "name": "United States Dollar",
-//         "shortName": "USD",
-//         "image": "../../../assets/images/flag/us.svg",
-//         "conversionRate": 1.18,
-//         "convertedAmount": 100300
-//       },
-//       {
-//         "name": "British Pound",
-//         "shortName": "GBP",
-//         "image": "../../../assets/images/flag/gbp.jpg",
-//         "conversionRate": 0.85,
-//         "convertedAmount": 72250
-//       },
-//       {
-//         "name": "Japanese Yen",
-//         "shortName": "JPY",
-//         "image": "../../../assets/images/flag/jpy.jpg",
-//         "conversionRate": 129.39,
-//         "convertedAmount": 11005150
-//       },
-//       {
-//         "name": "Egyptian Pound",
-//         "shortName": "EGP",
-//         "image": "../../../assets/images/flag/eg.svg",
-//         "conversionRate": 19.88,
-//         "convertedAmount": 1692800
-//       }
-//     ]
-//   },
-//   {
-//     "name": "British Pound",
-//     "shortName": "GBP",
-//     "image": "../../../assets/images/flag/gbp.jpg",
-//     "amount": 72000,
-//     "convertTo": [
-//       {
-//         "name": "United States Dollar",
-//         "shortName": "USD",
-//         "image": "../../../assets/images/flag/us.svg",
-//         "conversionRate": 1.39,
-//         "convertedAmount": 100080
-//       },
-//       {
-//         "name": "Euro",
-//         "shortName": "EUR",
-//         "image": "../../../assets/images/flag/eur.jpg",
-//         "conversionRate": 1.18,
-//         "convertedAmount": 85080
-//       },
-//       {
-//         "name": "Japanese Yen",
-//         "shortName": "JPY",
-//         "image": "../../../assets/images/flag/jpy.jpg",
-//         "conversionRate": 151.91,
-//         "convertedAmount": 10950720
-//       },
-//       {
-//         "name": "Egyptian Pound",
-//         "shortName": "EGP",
-//         "image": "../../../assets/images/flag/eg.svg",
-//         "conversionRate": 23.26,
-//         "convertedAmount": 1672320
-//       }
-//     ]
-//   },
-//   {
-//     "name": "Japanese Yen",
-//     "shortName": "JPY",
-//     "image": "../../../assets/images/flag/jpy.jpg",
-//     "amount": 10935000,
-//     "convertTo": [
-//       {
-//         "name": "United States Dollar",
-//         "shortName": "USD",
-//         "image": "../../../assets/images/flag/us.svg",
-//         "conversionRate": 0.0091,
-//         "convertedAmount": 9948.85
-//       },
-//       {
-//         "name": "Euro",
-//         "shortName": "EUR",
-//         "image": "../../../assets/images/flag/eur.jpg",
-//         "conversionRate": 0.0077,
-//         "convertedAmount": 8402.95
-//       },
-//       {
-//         "name": "British Pound",
-//         "shortName": "GBP",
-//         "image": "../../../assets/images/flag/gbp.jpg",
-//         "conversionRate": 0.0067,
-//         "convertedAmount": 7314.45
-//       },
-//       {
-//         "name": "Egyptian Pound",
-//         "shortName": "EGP",
-//         "image": "../../../assets/images/flag/eg.svg",
-//         "conversionRate": 0.0995,
-//         "convertedAmount": 10883.33
-//       }
-//     ]
-//   },
-//   {
-//     "name": "Egyptian Pound",
-//     "shortName": "EGP",
-//     "image": "../../../assets/images/flag/eg.svg",
-//     "amount": 1679000,
-//     "convertTo": [
-//       {
-//         "name": "United States Dollar",
-//         "shortName": "USD",
-//         "image": "../../../assets/images/flag/us.svg",
-//         "conversionRate": 0.059,
-//         "convertedAmount": 99110
-//       },
-//       {
-//         "name": "Euro",
-//         "shortName": "EUR",
-//         "image": "../../../assets/images/flag/eur.jpg",
-//         "conversionRate": 0.053,
-//         "convertedAmount": 89267
-//       },
-//       {
-//         "name": "British Pound",
-//         "shortName": "GBP",
-//         "image": "../../../assets/images/flag/gbp.jpg",
-//         "conversionRate": 0.043,
-//         "convertedAmount": 72497
-//       },
-//       {
-//         "name": "Japanese Yen",
-//         "shortName": "JPY",
-//         "image": "../../../assets/images/flag/jpy.jpg",
-//         "conversionRate": 10.05,
-//         "convertedAmount": 16879295
-//       }
-//     ]
-//   }
-// ]
+export const chartData = [
+  { month: 'January', rate: 1.2 },
+  { month: 'February', rate: 1.22 },
+  { month: 'March', rate: 1.23 },
+  { month: 'April', rate: 1.24 },
+  { month: 'May', rate: 1.23 },
+  { month: 'June', rate: 1.22 },
+  { month: 'July', rate: 1.24 }
+]
