@@ -17,10 +17,10 @@ export class HomeComponent implements OnInit {
   currenciesList: any = [];
   isLoadingCurrencies: boolean = false;
 
-  amount: any;
+  amount: any = 1;
   currencyOne: any;
   currencyTwo: any;
-  result: any = 1;
+  result: any = 0;
 
   currenciesData: any = [];
   isLoadingCurrenciesData: boolean = false;
@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
     this.currentLanguage = window.localStorage.getItem(keys.language);
     this.getAllCurrencies();
     this.getCurrenciesData();
+    this.convert();
   }
 
   getAllCurrencies(): void {

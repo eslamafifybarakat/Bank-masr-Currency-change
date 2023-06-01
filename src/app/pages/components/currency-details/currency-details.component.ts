@@ -1,5 +1,5 @@
 import { AlertsService } from './../../../core/services/alerts/alerts.service';
-import { chartData, currencies, currenciesData } from './../../../shared/Ts-Files/dummy-data';
+import { chartData, currencies } from './../../../shared/Ts-Files/dummy-data';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { keys } from './../../../shared/configs/localstorage-key';
 import { HomeService } from '../../services/home.service';
@@ -17,7 +17,7 @@ export class CurrencyDetailsComponent implements OnInit {
   currenciesList: any = [];
   isLoadingCurrencies: boolean = false;
 
-  amount: any;
+  amount: any = 1;
   currencyOne: any;
   currencyTwo: any;
   result: any = 0;
@@ -55,6 +55,7 @@ export class CurrencyDetailsComponent implements OnInit {
       }
     }
   };
+
   constructor(
     private alertsService: AlertsService,
     private homeService: HomeService,
@@ -65,6 +66,7 @@ export class CurrencyDetailsComponent implements OnInit {
     this.currentLanguage = window.localStorage.getItem(keys.language);
     this.getAllCurrencies();
     this.getChartData();
+    this.convert();
   }
 
   getAllCurrencies(): void {
