@@ -13,7 +13,7 @@ export const currencies = [
     "image": "../../../assets/images/flag/eg.svg",
   },
   {
-    id: 1, enName: 'USD', arName: 'دولار امريكي', base: 'USD',
+    id: 1, enName: 'USD', arName: 'دولار أمريكي', base: 'USD',
     "symbol": "$",
     "conversions": {
       "EGP": 15.75,
@@ -41,7 +41,7 @@ export const currencies = [
     "image": "../../../assets/images/flag/eu.svg",
   },
   {
-    id: 1, enName: 'GBP', arName: 'جنية استرليني', base: 'GBP',
+    id: 1, enName: 'GBP', arName: 'جنية إسترليني', base: 'GBP',
     "symbol": "£",
     "conversions": {
       "EGP": 22.20,
@@ -68,7 +68,7 @@ export const currencies = [
     "image": "../../../assets/images/flag/bh.svg",
   },
   {
-    id: 1, enName: 'AUD', arName: 'دولار استرليني', base: 'AUD', "symbol": "AU$",
+    id: 1, enName: 'AUD', arName: 'دولار إسترليني', base: 'AUD', "symbol": "AU$",
     "conversions": {
       "EGP": 12.35,
       "USD": 0.78,

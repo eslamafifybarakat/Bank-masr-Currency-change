@@ -4,7 +4,7 @@
     "arabic":"Arabic"
   },
   "general": {
-    "default":"افتراضي",
+    "default":"إفتراضي",
     "moreDetails":"المزيد من التفاصيل",
     "convert":"تحويل",
     "details":"تفاصيل",
@@ -17,7 +17,7 @@
   "labels": {
     "amount": "الكمية",
     "from":"من",
-    "to":"الي"
+    "to":"إلى"
   },
   "placeholder": {
     "amount":"أدخل الكمية",
@@ -28,6 +28,6 @@
     "currencyExchanger":"تغيير العملات"
   },
   "currencyDetails":{
-    "eur":"يورو الاتحاد الأوروبي يورو"
+    "eur":"يورو الإتحاد الأوروبي يورو"
   }
 }
