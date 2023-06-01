@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./theme.component.scss']
 })
 export class ThemeComponent implements OnInit {
-
   currentTheme = window?.localStorage?.getItem(keys?.theme);
   theme: any = "true";
 

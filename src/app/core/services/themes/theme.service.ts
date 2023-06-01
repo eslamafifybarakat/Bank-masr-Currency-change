@@ -1,3 +1,4 @@
+import { PublicService } from './../../../shared/services/public.service';
 import { keys } from './../../../shared/configs/localstorage-key';
 import { Theme, light, dark } from './theme';
 import { Injectable } from '@angular/core';
@@ -6,7 +7,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ThemeService {
-  constructor() { }
+  constructor(
+    private publicService: PublicService
+  ) { }
+
   private active: Theme = light;
   private availableThemes: Theme[] = [light, dark];
 
@@ -21,10 +25,12 @@ export class ThemeService {
   setLightTheme(): void {
     this.setActiveTheme(light);
     localStorage.setItem(keys?.theme, 'light');
+    this.publicService?.theme?.next('light');
   }
   setDarkTheme(): void {
     this.setActiveTheme(dark);
     localStorage.setItem(keys?.theme, 'dark');
+    this.publicService?.theme?.next('dark');
   }
 
   setColorTheme(color: any): void {

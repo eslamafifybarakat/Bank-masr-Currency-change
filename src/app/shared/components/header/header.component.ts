@@ -1,5 +1,4 @@
-import { SharedService } from '../../services/shared.service';
-import { keys } from './../../configs/localstorage-key';
+import { PublicService } from './../../services/public.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   collapsedMenu: boolean = false;
-  currentTheme = window?.localStorage?.getItem(keys?.theme);
+  currentTheme: any;
 
   constructor(
-    private sharedService: SharedService,
+    private publicService: PublicService,
   ) { }
 
   ngOnInit(): void {
+    this.publicService?.theme?.subscribe((res: any) => {
+      this.currentTheme = res;
+    })
   }
 
 }
