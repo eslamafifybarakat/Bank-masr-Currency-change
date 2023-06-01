@@ -3,7 +3,6 @@ import { ThemeComponent } from './components/header/components/theme/theme.compo
 import { AngMaterialModule } from './modules/ang-material/ang-material.module';
 import { SkeletonComponent } from './components/skeleton/skeleton.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrimeNgModule } from './modules/prime-ng/prime-ng.module';
 import { TranslateModule } from '@ngx-translate/core';
@@ -18,7 +17,6 @@ const allSharedComponents = [
   LanguageSelectorComponent,
   SkeletonComponent,
   HeaderComponent,
-  FooterComponent,
   ThemeComponent
 ]
 const allSharedModule = [
