@@ -7,16 +7,12 @@
 @import "styles/scss/buttons.scss";
 @import "styles/scss/form-field.scss";
 @import "styles/scss/angular-material/form-field.scss";
-@import "styles/scss/primeng/p-form-field.scss";
 @import "styles/scss/cust-style.scss";
 @import "styles/scss/primeng/p-select.scss";
-@import "styles/scss/primeng/p-dialog.scss";
-// @import "styles/scss/primeng/primeng-icon-rtl.scss";
 
 [dir="rtl"] {
   @import "~bootstrap/dist/css/bootstrap.min.css";
   @import "styles/scss/style-rtl/cust-rtl-style.scss";
-  @import "styles/scss/style-rtl/p-form-rtl.scss";
   @import "styles/scss/style-rtl/p-select-rtl.scss";
 }
 
@@ -44,33 +40,4 @@ body {
 .mat-snack-bar-container {
   background-color: #363636 !important;
   color: #fff;
-}
-
-.ng5-slider .ng5-slider-pointer {
-  cursor: pointer;
-  width: 20px !important;
-  height: 20px !important;
-  top: -8px !important;
-  background-color: var(--bg-main-color) !important;
-}
-.ng5-slider .ng5-slider-pointer:after {
-  display: none;
-}
-.ng5-slider .ng5-slider-selection {
-  background-color: var(--bg-main-color) !important;
-}
-
-.pac-container {
-  z-index: 10005000 !important;
-}
-.p-dialog .p-dialog-content:last-of-type,
-.p-dialog .p-dialog-header {
-  background-color: transparent !important;
-}
-.mat-dialog-container {
-  position: relative !important;
-}
-.cdk-overlay-pane {
-  min-width: 50%;
-  min-height: 70vh;
 }

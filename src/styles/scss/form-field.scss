@@ -59,85 +59,16 @@ input:-webkit-autofill {
 .p-inputtext {
   box-shadow: none !important;
   outline: none !important;
-  // background-color: var(--bg-white-color);
   border-color: var(--border-color);
   height: 3.4rem;
   border-radius: var(--border-input-radius);
   padding: 1rem;
-  // background-color: #fafafa;
-  // border-color: #d7d7d799;
+}
+.p-dropdown,
+.p-input-icon-right > .p-inputtext {
+  width: 100% !important;
 }
 
-.form-control-left {
-  border-left: 0;
-}
-
-.input-group {
-  .input-group-text {
-    background-color: var(--bg-input-color) !important;
-    border-color: var(--border-input-color);
-    border-radius: var(--border-input-radius);
-
-    .eyeIcon {
-      color: var(--text-desc-color);
-    }
-  }
-
-  .input-group-text-left {
-    border-radius: var(--border-input-radius) 0 0 var(--border-input-radius) !important;
-    border-right: transparent !important;
-  }
-
-  .input-group-text-right {
-    border-radius: 0 var(--border-input-radius) var(--border-input-radius) 0 !important;
-    border-left: transparent !important;
-  }
-
-  .form-control-single,
-  .form-control-single:focus,
-  .form-control-single:focus-within,
-  .form-control-single:focus-visible {
-    border-right: transparent;
-  }
-}
-
-.form-control.is-valid,
-.was-validated .form-control:valid {
-  // background-image: url(../../assets/images/form/valid.svg) !important;
-  border: 1px solid var(--border-color);
-}
-
-.border-red {
-  border: 1px solid #dc3545 !important;
-  border-radius: var(--border-input-radius) !important;
-
-  .ng-select-container {
-    border: 0 !important;
-  }
-  .p-input-icon-right > .p-inputtext {
-    border: 0 !important;
-  }
-}
-
-.border-green {
-  border: 1px solid #198754 !important;
-  border-radius: 0.625rem !important;
-
-  .ng-select-container {
-    border: 0 !important;
-  }
-}
-
-.textarea {
-  height: 120px;
-}
-.required {
-  &:after {
-    content: "*";
-    color: #e24c4c;
-    margin-left: 3px;
-  }
-}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
