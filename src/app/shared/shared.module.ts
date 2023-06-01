@@ -1,5 +1,4 @@
 import { LanguageSelectorComponent } from './components/header/components/language-selector/language-selector.component';
-import { OverlayLoadingComponent } from './components/overlay-spinner/overlay-loading.component';
 import { ThemeComponent } from './components/header/components/theme/theme.component';
 import { AngMaterialModule } from './modules/ang-material/ang-material.module';
 import { SkeletonComponent } from './components/skeleton/skeleton.component';
@@ -17,7 +16,6 @@ import { NgModule } from '@angular/core';
 
 const allSharedComponents = [
   LanguageSelectorComponent,
-  OverlayLoadingComponent,
   SkeletonComponent,
   HeaderComponent,
   FooterComponent,
