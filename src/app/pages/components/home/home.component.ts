@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   amount: any;
   currencyOne: any;
   currencyTwo: any;
-  result: any = 0;
+  result: any = 1;
 
   currenciesData: any = [];
   isLoadingCurrenciesData: boolean = false;

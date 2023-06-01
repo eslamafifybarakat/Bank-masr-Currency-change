@@ -63,10 +63,12 @@ input:-webkit-autofill {
   height: 3.4rem;
   border-radius: var(--border-input-radius);
   padding: 1rem;
+  background-color: var(--bg-input-color);
 }
 .p-dropdown,
 .p-input-icon-right > .p-inputtext {
   width: 100% !important;
+  background-color: var(--bg-input-color);
 }
 
 input[type="number"]::-webkit-inner-spin-button,
