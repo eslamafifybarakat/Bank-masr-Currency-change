@@ -1,6 +1,6 @@
 <div class="dropdown-theme general-dropdown">
   <div class="dropdown">
-    <button class="dropdown-toggle btn p-0 text-dark-color" type="button" id="dropdownMenuButton1"
+    <button class="dropdown-toggle btn p-0 text-dark-color" type="button" id="dropdownMenuButton"
       data-bs-toggle="dropdown" aria-expanded="false">
       <ng-container *ngIf="currentTheme=='light'; else darkMode">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
@@ -17,7 +17,7 @@
         </svg>
       </ng-template>
     </button>
-    <ul class="dropdown-menu border-0 shadow px-2 position-absolute" aria-labelledby="dropdownMenuButton1">
+    <ul class="dropdown-menu border-0 shadow px-2 position-absolute" aria-labelledby="dropdownMenuButton">
       <li class="nav-item">
         <a class="nav-link" (click)="color('#871e35')">
           <span class="d-flex align-items-center gap-2">

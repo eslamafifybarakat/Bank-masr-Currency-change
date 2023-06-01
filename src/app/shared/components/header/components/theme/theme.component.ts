@@ -1,5 +1,5 @@
-import { keys } from './../../../../configs/localstorage-key';
 import { ThemeService } from './../../../../../core/services/themes/theme.service';
+import { keys } from './../../../../configs/localstorage-key';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -18,7 +18,6 @@ export class ThemeComponent implements OnInit {
 
   ngOnInit(): void {
     this.theme = window?.localStorage?.getItem(keys?.theme);
-
   }
 
   light(): void {

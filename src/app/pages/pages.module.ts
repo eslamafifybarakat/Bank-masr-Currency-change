@@ -1,5 +1,4 @@
 import { CurrencyDetailsComponent } from './components/currency-details/currency-details.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -15,11 +14,9 @@ import { NgModule } from '@angular/core';
     CurrencyDetailsComponent,
   ],
   imports: [
-    ReactiveFormsModule,
     PagesRoutingModule,
     CommonModule,
     SharedModule,
-    FormsModule,
     CoreModule
   ]
 })

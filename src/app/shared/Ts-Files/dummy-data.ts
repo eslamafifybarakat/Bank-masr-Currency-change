@@ -38,7 +38,7 @@ export const currencies = [
       "JPY": 132.78,
       "INR": 89.28
     },
-    "image": "../../../assets/images/flag/eur.jpg",
+    "image": "../../../assets/images/flag/eu.svg",
   },
   {
     id: 1, enName: 'GBP', arName: 'جنية استرليني', base: 'GBP',
@@ -52,7 +52,7 @@ export const currencies = [
       "JPY": 155.16,
       "INR": 104.23
     },
-    "image": "../../../assets/images/flag/gbp.jpg",
+    "image": "../../../assets/images/flag/gb.svg",
   },
   {
     id: 1, enName: 'INR', arName: 'الروبية الهندية', base: 'INR', "symbol": "₹",
@@ -65,7 +65,7 @@ export const currencies = [
       "AUD": 0.018,
       "JPY": 1.49
     },
-    "image": "../../../assets/images/flag/bhd.jpg",
+    "image": "../../../assets/images/flag/bh.svg",
   },
   {
     id: 1, enName: 'AUD', arName: 'دولار استرليني', base: 'AUD', "symbol": "AU$",
@@ -78,7 +78,7 @@ export const currencies = [
       "JPY": 81.62,
       "INR": 54.90
     },
-    "image": "../../../assets/images/flag/aud.jpg",
+    "image": "../../../assets/images/flag/au.svg",
   },
   {
     id: 1, enName: 'JPY', arName: 'الين الياباني', base: 'JPY', "symbol": "¥",
@@ -91,11 +91,9 @@ export const currencies = [
       "AUD": 0.012,
       "INR": 0.67
     },
-    "image": "../../../assets/images/flag/jpy.jpg",
+    "image": "../../../assets/images/flag/jp.svg",
   },
 ]
-
-
 
 export const currenciesData = [
   {
@@ -107,7 +105,7 @@ export const currenciesData = [
       {
         "name": "Euro",
         "shortName": "EUR",
-        "image": "../../../assets/images/flag/eur.jpg",
+        "image": "../../../assets/images/flag/eu.svg",
         "conversionRate": 0.85,
         "convertedAmount": 85000,
         "parentConversionRate": 1.18
@@ -115,7 +113,7 @@ export const currenciesData = [
       {
         "name": "British Pound",
         "shortName": "GBP",
-        "image": "../../../assets/images/flag/gbp.jpg",
+        "image": "../../../assets/images/flag/gb.svg",
         "conversionRate": 0.72,
         "convertedAmount": 72000,
         "parentConversionRate": 1.39
@@ -123,7 +121,7 @@ export const currenciesData = [
       {
         "name": "Japanese Yen",
         "shortName": "JPY",
-        "image": "../../../assets/images/flag/jpy.jpg",
+        "image": "../../../assets/images/flag/jp.svg",
         "conversionRate": 109.35,
         "convertedAmount": 10935000,
         "parentConversionRate": 0.0091
@@ -133,13 +131,13 @@ export const currenciesData = [
   {
     "name": "Euro",
     "shortName": "EUR",
-    "image": "../../../assets/images/flag/eur.jpg",
+    "image": "../../../assets/images/flag/eu.svg",
     "amount": 85000,
     "convertTo": [
       {
         "name": "British Pound",
         "shortName": "GBP",
-        "image": "../../../assets/images/flag/gbp.jpg",
+        "image": "../../../assets/images/flag/gb.svg",
         "conversionRate": 0.85,
         "convertedAmount": 72250,
         "parentConversionRate": 1.39
@@ -147,7 +145,7 @@ export const currenciesData = [
       {
         "name": "Japanese Yen",
         "shortName": "JPY",
-        "image": "../../../assets/images/flag/jpy.jpg",
+        "image": "../../../assets/images/flag/jp.svg",
         "conversionRate": 129.39,
         "convertedAmount": 11005150,
         "parentConversionRate": 0.0091
@@ -165,7 +163,7 @@ export const currenciesData = [
   {
     "name": "British Pound",
     "shortName": "GBP",
-    "image": "../../../assets/images/flag/gbp.jpg",
+    "image": "../../../assets/images/flag/gb.svg",
     "amount": 72000,
     "convertTo": [
       {
@@ -179,7 +177,7 @@ export const currenciesData = [
       {
         "name": "Euro",
         "shortName": "EUR",
-        "image": "../../../assets/images/flag/eur.jpg",
+        "image": "../../../assets/images/flag/eu.svg",
         "conversionRate": 1.18,
         "convertedAmount": 85080,
         "parentConversionRate": 0.85

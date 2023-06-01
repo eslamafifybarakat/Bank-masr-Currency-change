@@ -1,7 +1,7 @@
 export const roots = {
   home: {
-    getAllCurrencies: '/allCurrencies',
-    getCurrencies: '/currencies-data',
-    getChartData: '/chart-data',
+    getAllCurrencies: 'api/allCurrencies',
+    getCurrencies: 'api/currencies-data',
+    getChartData: 'api/chart-data',
   }
 }

@@ -36,7 +36,7 @@ export class AppComponent {
   ) {
     setTimeout(() => {
       this.showSpinner = false;
-    }, 2000);
+    }, 1500);
 
     this.translateService?.addLangs(this.languages);
     const currentLang = window.localStorage.getItem(keys.language);

@@ -26,5 +26,8 @@
    },
   "home":{
     "currencyExchanger":"مبادل العملات"
+  },
+  "currencyDetails":{
+    "eur":"يورو الاتحاد الأوروبي يورو"
   }
 }

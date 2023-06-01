@@ -26,6 +26,8 @@
 
 "home":{
   "currencyExchanger":"Currency Exchanger"
+},
+"currencyDetails":{
+  "eur":"EUR European Union Euro"
 }
-
 }
