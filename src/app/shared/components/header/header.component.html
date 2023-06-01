@@ -17,10 +17,11 @@
     <div class="collapse navbar-collapse m-auto gap-4" id="navbarSupportedContent" [class.show]="collapsedMenu">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
         <li class="nav-item link">
-          <a class="nav-link active" [routerLink]="'/currency-details'">EUR-USD Details</a>
+          <a class="nav-link active" [routerLink]="'/currency-details'">EUR-USD
+            <span>{{'general.details'|translate}}</span></a>
         </li>
         <li class="nav-item link">
-          <a class="nav-link">EUR-GBP Details</a>
+          <a class="nav-link">EUR-GBP <span>{{'general.details'|translate}}</span></a>
         </li>
 
       </ul>

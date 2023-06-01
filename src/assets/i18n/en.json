@@ -5,6 +5,7 @@
   },
   "general": {
     "default":"Default",
+    "details":"Details",
     "moreDetails":"More Details",
     "convert":"Convert",
     "backToHome": "Back to home",

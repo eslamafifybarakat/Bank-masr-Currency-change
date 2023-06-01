@@ -129,7 +129,7 @@ hr {
     transition: all 0.2s ease-in-out;
 
     .nav-link {
-      color: #707070;
+      color: var(--dropdown-link-color);
       padding: 14px 10px;
       font-size: 15px;
 
